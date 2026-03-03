@@ -372,12 +372,15 @@ export default function App() {
 
           <div className="w-full md:w-1/2 relative">
             <div className="aspect-[4/5] md:aspect-square w-full bg-charcoal border border-white/10 flex items-center justify-center p-3 relative z-10">
-              <div className="w-full h-full bg-black/60 relative flex items-center justify-center">
-                {/* Image Placeholder intended for Map/Storefront */}
-                <div className="absolute inset-0 bg-[#0a0a0a] border border-white/5 flex flex-col items-center justify-center text-center p-8">
-                  <MapPin className="text-white/20 mb-4" size={40} />
-                  <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30">Mapa / Ubicación<br />(Placeholder)</span>
-                </div>
+              <div className="w-full h-full bg-black/60 relative flex items-center justify-center overflow-hidden">
+                <iframe
+                  src="https://maps.google.com/maps?q=Av.+Los+Cocos+123,+Urb.+Santa+Isabel,+Piura,+Per%C3%BA&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-full border-0 absolute inset-0 md:grayscale md:contrast-125 md:opacity-80 md:hover:grayscale-0 md:hover:opacity-100 transition-all duration-500"
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mapa de Ubicación Raza Nuestra"
+                />
               </div>
             </div>
             {/* Background design element */}
